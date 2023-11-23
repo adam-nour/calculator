@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    <div><button></button></div>
+    </div>
+    <script>
+        firstNumber= 1
+        secondNumber =2
+        operator = ['+', '-', '*', '/'];
+
+
+        function add(firstNumber,secondNumber){
+            return firstNumber + secondNumber;
+
+        }
+        function subtract(firstNumber,secondNumber){
+            return firstNumber-secondNumber;
+
+        }
+        function multiply(firstNumber,secondNumber){
+            return firstNumber*secondNumber;
+
+        }
+        function divide(firstNumber,secondNumber){
+            return firstNumber/secondNumber;
+
+        }
+
+       function operate(operator,firstNumber,secondNumber){
+        if(operator[0]){
+            return add(firstNumber,secondNumber);
+        }else if(operator[1]){
+            return subtract(firstNumber,secondNumber);
+        }else if(operator[2]){
+            return multiply(firstNumber,secondNumber);
+        }else if(operator[3]){
+            return divide(firstNumber,secondNumber);
+        }else{
+            return "ERROR";
+        }
+
+       }
+    </script>
+</body>
+</html>
