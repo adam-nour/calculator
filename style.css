@@ -3,15 +3,19 @@ body, html {
     background-color: rgb(225, 223, 223);
     height: 100%;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
 
 #btn:hover{
     background-color: rgb(206, 206, 255);
+    transform: scale(0.90);
 }
 .container{
-    background-color: rgb(248, 223, 192);
+    background-color: blueviolet;
     border-radius: 5px;
 }
 #btn{
@@ -23,28 +27,49 @@ body, html {
     border: none;
     background-color: rgb(202, 202, 202);
     font-weight: 600;
+    transition: transform 0.3s ease;
 }
 .calkeypad{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
 
 }
+.spacer{
+    background-color: blueviolet;
+    width: 250px;
+    height: 15px;
+    z-index: 1;
+}
 .calbody{
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 450px;
+    width: 300px;
+    background-color: blueviolet;
+    border-radius: 15px;
 }
 #outputDiv{
-    background-color: antiquewhite;
+    background-color: transparent;
 }
 #outputDivResult{
-    background-color: antiquewhite;
+    background-color: transparent;
     text-align: right;
 }
 #display{
     height: 50px;
     width: 244px;
     font-size: medium;
-    background-color: antiquewhite;
+    background-color: transparent;
     border: none;
+    color: white;
+}
+#screen{
+    border-radius: 5px;
+    background-color: rgb(69, 69, 69);
+    color: white;
 }
