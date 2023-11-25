@@ -10,10 +10,12 @@
     <div class="calbody">
     
     <div class="container">
+        
         <div id="outputDiv">-----outputDiv-----------</div>
+        <div id="outputDivResult">-----RESULT-----------</div>
         <div class="calkeypad">
         <div class="column">
-    <div><button id ="btn" class="btnac">AC</button></div>
+    <div><button onclick="clearOutput()" id="btn" class="btnac">AC</button></div>
     <div><button onclick="addNumber('7')" id ="btn" class="btn7">7</button></div>
     <div><button onclick="addNumber('4')" id ="btn" class="btn4">4</button></div>
     <div><button onclick="addNumber('1')" id ="btn" class="btn1">1</button></div>
@@ -66,7 +68,7 @@
             return { result: null, expression: "Invalid operator" };
     }
 
-    let mathExpression = `${firstNum} ${operator} ${secondNum} = ${result}`;
+    let mathExpression = `${firstNum} ${operator} ${secondNum} = `;
     return { result: result, expression: mathExpression };
 }
 
@@ -149,6 +151,7 @@
         let { result, expression } = createMathExpression(firstNumber, secondNumber, operator);
         let outputDiv = document.getElementById("outputDiv");
         outputDiv.textContent = expression;
+        outputDivResult.textContent = result;
         console.log(result); // Output: result as a number
         // Reset variables for next calculation
         firstNumber = result;
@@ -156,6 +159,11 @@
         operator = '';
     }
 }
+    function clearOutput(){
+        firstNumber =''
+        outputDiv.textContent = '';
+        outputDivResult.textContent = '';
+    }
 
         function addNumber(number) {
     if (operator === '') {
