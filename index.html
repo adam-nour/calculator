@@ -10,9 +10,9 @@
     <div class="calbody">
     
     <div class="container">
-        
-        <div id="outputDiv">-----outputDiv-----------</div>
-        <div id="outputDivResult">-----RESULT-----------</div>
+        <input type="text" id="display" readonly>
+        <div id="outputDiv">.</div>
+        <div id="outputDivResult">0</div>
         <div class="calkeypad">
         <div class="column">
     <div><button onclick="clearOutput()" id="btn" class="btnac">AC</button></div>
@@ -22,7 +22,7 @@
     <div><button onclick="addNumber('-')"id ="btn" class="+/-">+/-</button></div>
        </div>
        <div class="column">
-    <div><button id ="btn" class="btndel">Del</button></div>   
+    <div><button onclick="backspace()" id ="btn" class="btndel">Del</button></div>   
     <div><button onclick="addNumber('8')"id ="btn" class="btn8">8</button></div>
     <div><button onclick="addNumber('5')" id ="btn" class="btn5">5</button></div>
     <div><button onclick="addNumber('2')" id ="btn" class="btn2">2</button></div>
@@ -73,6 +73,36 @@
 }
 
 
+
+function updateDisplay() {
+    let display = document.getElementById('display');
+    display.value = firstNumber;
+}
+function updateDisplaySecondNumber() {
+    let display = document.getElementById('display');
+    display.value = secondNumber;
+}
+function updateDisplayOperator() {
+    let display = document.getElementById('display');
+    display.value = operator;
+}
+
+
+function backspace() {
+    if (firstNumber.length > 0 && secondNumber.length <= 0 && operator.length <=0 ) {
+        firstNumber = firstNumber.slice(0, -1); // Remove the last character
+        updateDisplay(); // Update the displayed expression
+    }
+    else if (secondNumber.length > 0) {
+        secondNumber = secondNumber.slice(0, -1); // Remove the last character
+        updateDisplaySecondNumber(); // Update the displayed expression
+    }
+    else if (operator.length > 0) {
+        operator = operator.slice(0, -1); // Remove the last character
+        updateDisplayOperator(); // Update the displayed expression
+    }
+    
+}
 
 
 
@@ -150,9 +180,16 @@
     if (firstNumber !== '' && secondNumber !== '' && operator !== '') {
         let { result, expression } = createMathExpression(firstNumber, secondNumber, operator);
         let outputDiv = document.getElementById("outputDiv");
+        function updateDisplayResult() {
+    let display = document.getElementById('display');
+    display.value = result;
+}
         outputDiv.textContent = expression;
         outputDivResult.textContent = result;
-        console.log(result); // Output: result as a number
+        updateDisplayResult()
+        console.log(result); 
+
+        // Output: result as a number
         // Reset variables for next calculation
         firstNumber = result;
         secondNumber = '';
@@ -161,23 +198,29 @@
 }
     function clearOutput(){
         firstNumber =''
-        outputDiv.textContent = '';
-        outputDivResult.textContent = '';
+        outputDiv.textContent = '.';
+        outputDivResult.textContent = '0';
+        display.value=''
     }
 
         function addNumber(number) {
     if (operator === '') {
         firstNumber += number;
-        outputDiv.textContent = firstNumber;
+        // outputDiv.textContent = firstNumber;
+        updateDisplay();
     } else {
         secondNumber += number;
-        outputDiv.textContent = secondNumber;
+       
+        // outputDiv.textContent = secondNumber; 
+        updateDisplaySecondNumber();
     }
 }
 function addOperator(op) {
     if (firstNumber !== '' && secondNumber === '') {
         operator = op;
-        outputDiv.textContent = op;
+        
+        // outputDiv.textContent = op;
+        updateDisplayOperator();
     }
 }
 
