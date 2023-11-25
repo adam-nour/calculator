@@ -1,0 +1,21 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+#btn{
+    height: 30px;
+    width: 30px;
+}
+.calkeypad{
+    display: flex;
+
+}
+.calbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
