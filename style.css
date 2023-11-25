@@ -1,12 +1,28 @@
 
 body, html {
+    background-color: ;
     height: 100%;
     margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+
+#btn:hover{
+    background-color: rgb(206, 206, 255);
+}
+.container{
+    background-color: bisque;
+    border-radius: 5px;
+}
 #btn{
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1px;
+    border: none;
+    background-color: rgb(202, 202, 202);
+    font-weight: 600;
 }
 .calkeypad{
     display: flex;
@@ -20,4 +36,11 @@ body, html {
 }
 #outputDivResult{
     text-align: right;
+}
+#display{
+    height: 60px;
+    width: 240px;
+    font-size: medium;
+    background-color: antiquewhite;
+    border-radius: 5px;
 }
