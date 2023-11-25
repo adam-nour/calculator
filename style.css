@@ -1,75 +1,98 @@
+body,
+html {
+  background-color: rgb(225, 223, 223);
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
-body, html {
-    background-color: rgb(225, 223, 223);
-    height: 100%;
-    margin: 0;
+#btn:hover {
+  background-color: rgb(206, 206, 255);
+  transform: scale(0.9);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.container {
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+#btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px;
+  border: none;
+  background-color: blueviolet;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.calkeypad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(119, 57, 178);
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.spacer {
+  background-color: transparent;
+  width: 20px;
+  height: 15px;
+  z-index: 1;
+}
+.calbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+  width: 300px;
+  background-color: blueviolet;
+  border-radius: 15px;
+}
+#outputDiv {
+  background-color: transparent;
+}
+#outputDivResult {
+  background-color: transparent;
+  text-align: right;
+}
+#display {
+  height: 50px;
+  width: 244px;
+  font-size: medium;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+#screen {
+  border-radius: 5px;
+  background-color: rgb(69, 69, 69);
+  color: white;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-
-#btn:hover{
-    background-color: rgb(206, 206, 255);
-    transform: scale(0.90);
-}
-.container{
-    background-color: blueviolet;
-    border-radius: 5px;
-}
-#btn{
-    height: 60px;
-    width: 60px;
-    border-radius: 10px;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
     padding: 10px;
-    margin: 1px;
-    border: none;
-    background-color: rgb(202, 202, 202);
-    font-weight: 600;
-    transition: transform 0.3s ease;
-}
-.calkeypad{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: antiquewhite;
-    border-radius: 10px;
-
-}
-.spacer{
-    background-color: blueviolet;
-    width: 250px;
-    height: 15px;
-    z-index: 1;
-}
-.calbody{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    width: 300px;
-    background-color: blueviolet;
-    border-radius: 15px;
-}
-#outputDiv{
-    background-color: transparent;
-}
-#outputDivResult{
-    background-color: transparent;
-    text-align: right;
-}
-#display{
-    height: 50px;
-    width: 244px;
-    font-size: medium;
-    background-color: transparent;
-    border: none;
-    color: white;
-}
-#screen{
-    border-radius: 5px;
-    background-color: rgb(69, 69, 69);
-    color: white;
-}
+    font-size: 20px;
+  }
+  
+  .fa-github {
+    color: rgb(110, 56, 160);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
