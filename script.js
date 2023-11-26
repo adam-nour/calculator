@@ -21,7 +21,7 @@ function createMathExpression(firstNum, secondNum, operator) {
   }
 
   let mathExpression = `${firstNum} ${operator} ${secondNum} = `;
-  return { result: result, expression: mathExpression };
+  return { result: result.toFixed(3), expression: mathExpression };
 }
 
 function updateDisplay() {
