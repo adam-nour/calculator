@@ -43,6 +43,21 @@ html {
 #btn.btnmul{
   background-color: rgb(46, 168, 62);
 }
+#btn.btnadd:hover,
+#btn.btnsub:hover,
+#btn.btndiv:hover,
+#btn.btnmul:hover{
+  background-color: rgb(176, 239, 185);
+}
+
+#btn.btnac:hover,
+#btn.btndel:hover{
+  background-color: rgb(176, 233, 239);
+}
+#btn.btnequal:hover{
+  background-color: pink;
+}
+
 #btn.btnac,
 #btn.btndel{
   background-color: rgb(40, 153, 188);
